@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone Registration Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="capstone.css" />
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <h1
+              class="text-[#0e141b] text-[22px] font-bold text-center pb-3 pt-5"
+            >
+              Registration Form
+            </h1>
+            <form id="registrationForm">
+              <div
+                class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3"
+              >
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#0e141b] text-base font-medium pb-2">Name</p>
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-input flex w-full min-w-0 resize-none rounded-xl border border-[#d0dbe7] h-14 p-[15px] text-base"
+                    placeholder="Your name"
+                  />
+                </label>
+              </div>
+              <div
+                class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3"
+              >
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#0e141b] text-base font-medium pb-2">Email</p>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-input flex w-full min-w-0 resize-none rounded-xl border border-[#d0dbe7] h-14 p-[15px] text-base"
+                    placeholder="Your email"
+                  />
+                </label>
+              </div>
+              <div
+                class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3"
+              >
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#0e141b] text-base font-medium pb-2">
+                    Password
+                  </p>
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-input flex w-full min-w-0 resize-none rounded-xl border border-[#d0dbe7] h-14 p-[15px] text-base"
+                    placeholder="Your password"
+                  />
+                </label>
+              </div>
+              <div
+                class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3"
+              >
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#0e141b] text-base font-medium pb-2">
+                    Date of Birth
+                  </p>
+                  <input
+                    type="date"
+                    id="dob"
+                    class="form-input flex w-full min-w-0 resize-none rounded-xl border border-[#d0dbe7] h-14 p-[15px] text-base"
+                  />
+                </label>
+              </div>
+              <div class="px-4">
+                <label class="flex gap-x-3 py-3 flex-row">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    class="h-5 w-5 rounded border-[#d0dbe7] border-2 bg-transparent"
+                  />
+                  <p class="text-[#0e141b] text-base font-normal">
+                    I agree to the Terms of Service and Privacy Policy.
+                  </p>
+                </label>
+              </div>
+              <div class="flex px-4 py-3">
+                <button
+                  type="button"
+                  onclick="saveToLocalStorage()"
+                  class="flex min-w-[84px] max-w-[480px] items-center justify-center rounded-xl h-10 px-4 flex-1 bg-[#1980e6] text-white text-sm font-bold"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+            <div class="px-4 py-3">
+              <table class="flex-1">
+                <thead>
+                  <tr class="bg-slate-50">
+                    <th
+                      class="px-4 py-3 text-left text-[#0e141b] text-sm font-medium"
+                    >
+                      Name
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-[#0e141b] text-sm font-medium"
+                    >
+                      Email
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-[#0e141b] text-sm font-medium"
+                    >
+                      Password
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-[#0e141b] text-sm font-medium"
+                    >
+                      DoB
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-[#0e141b] text-sm font-medium"
+                    >
+                      Terms
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="userTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="capstone.js"></script>
+  </body>
+</html>
